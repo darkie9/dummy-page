@@ -1,0 +1,19 @@
+// declaring a function to sort numbers decreasing from left to right  
+let bubble_Sort =(a) =>
+ { // declaring a copy of input array and storing in another variable since we don't want the working array to get modifed
+    var A =[...a];
+ // using array.map() to iterate over every array element with some callback and making a new array
+ // as we follow the number for every position the map() gets biggest number in the reduced array
+ var reformArray =A.map(Obj =>
+ {   let rObj;
+     rObj = a.reduce((x,y) => {
+    let k =(x>=y)?x:y; // using reduce() method to get highest number in the array
+    return k; })
+ // to get index no of the highest number in the array and splice() to remove the number from the array
+ a.splice(a.indexOf(rObj),1) 
+ console.log(rObj) 
+ return rObj // return the new array 
+ }) 
+ alert(reformArray)} // show the new array with descending order from L to R
+// function ends
+ 
